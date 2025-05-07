@@ -1,0 +1,20 @@
+# Manipulación de Datos
+pandas
+numpy
+
+# Entorno de Notebooks
+jupyterlab
+
+# Visualización
+matplotlib
+seaborn
+
+# Base de Datos PostgreSQL
+psycopg2-binary
+
+# Machine Learning y Preprocesamiento
+scikit-learn
+
+# Generación de Datos Sintéticos
+sdv
+ctgan
