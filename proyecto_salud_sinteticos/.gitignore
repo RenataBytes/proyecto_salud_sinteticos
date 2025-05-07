@@ -1,0 +1,43 @@
+# Entornos Virtuales de Python
+venv/
+env/
+*.env
+
+# Archivos de Python compilados y caché
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Carpetas de configuración de IDEs populares
+.vscode/
+.idea/
+.project
+.classpath
+*.tmproj
+
+# Archivos de Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# Archivos de sistema operativo
+*.DS_Store
+Thumbs.db
+
+# Archivos de configuración con secretos (añadiré los específicos más adelante)
+# Ejemplo: config/db_secrets.json
+
+# Datos (si decido no subirlos a Git porque son muy grandes o sensibles)
+# data/raw/*.csv
+# data/processed/*.csv
+# data/synthetic/*.csv
+
+# Archivos de logs
+*.log
+logs/
+
+# Archivos de salida o temporales
+dist/
+build/
+*.zip
+*.tar.gz
+*.egg-info/
