@@ -67,13 +67,21 @@ proyecto_salud_sinteticos/
 ├── models/                     # Saved/trained machine learning models (e.g., .pkl, .h5)
 
 ├── notebooks/                  # Jupyter notebooks for exploration, analysis, and experimentation
+
 │   ├── 01_setup_and_config/
+
 │   ├── 02_data_ingestion/
+
 │   ├── 03_data_quality_assessment/
+
 │   ├── 04_exploratory_data_analysis_eda/
+
 │   ├── 05_data_preprocessing/
+
 │   ├── 06_modeling/
+
 │   ├── 07_evaluation/
+
 │   └── archive/                # Older or less relevant notebooks
 
 ├── reports/                    # Generated reports, figures, and final outputs/visualizations
@@ -85,13 +93,17 @@ proyecto_salud_sinteticos/
 │   ├── init.py                 # Makes src a Python package
 
 │   ├── data_processing/        # Modules for data loading, cleaning, transformation
+
 │   │   ├── init.py
+
 │   │   └── cleaners.py         # Example cleaner module
 
 │   ├── database_utils.py       # Utility functions for database interactions
 
 │   ├── modeling/               # Modules related to model definitions, training, evaluation
+
 │   │   ├── init.py
+
 │   │   └── sdv_models.py       # Example modeling module
 
 │   └── utils.py                # General helper functions (e.g., config loading)
