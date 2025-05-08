@@ -1,0 +1,9 @@
+# Ejemplo de environment.yml para Conda
+name: proyecto_salud_sinteticos
+channels:
+  - defaults
+dependencies:
+  - python=3.9 # O la versión que prefieras
+  - pip
+  - pip:
+    - -r requirements.txt

@@ -41,3 +41,6 @@ build/
 *.zip
 *.tar.gz
 *.egg-info/
+
+# Cached data files from data directory
+data/caches/
