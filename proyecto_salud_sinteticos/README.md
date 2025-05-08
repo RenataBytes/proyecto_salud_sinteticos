@@ -41,37 +41,50 @@ This project explores various techniques for synthetic data generation within th
 
 Here's an overview of how the project is organized:
 
-.
-├── 📁 config/             # Configuration files (e.g., 🔑 database credentials )
 
-│   └── 📄 db_config_example.json
+proyecto_salud_sinteticos/ 
 
-├── 📁 data/               # All data files for the project
+├── config/                     # Configuration files (e.g., database.ini, api_keys_example.json)
 
-│   ├── 📁 raw/            # Original, immutable input datasets (e.g., CSVs, JSONs)
+│   └── db_config_example.json  # Example, actual config should be gitignored
 
-│   ├── 📁 processed/      # Cleaned, transformed, and preprocessed data
+├── data/                       # All project data
+│   ├── 01_raw/                 # Immutable original datasets
+│   ├── 02_processed/           # Cleaned, transformed, intermediate data
+│   ├── 03_validation/          # Datasets for validation purposes (e.g., hold-out sets)
+│   ├── 04_synthetic/           # Generated synthetic datasets
+│   └── caches/                 # Temporary cached data (gitignored)
 
-│   └── 📁 synthetic/      # Generated synthetic datasets
+├── docs/                       # Project documentation (reports, environment.yml, diagrams)
+│   └── environment.yml         # Example: Conda environment definition
 
-├── 📁 notebooks/          # 📓 Jupyter notebooks for experimentation and analysis
+├── models/                     # Saved/trained machine learning models (e.g., .pkl, .h5)
 
-│   ├── 📄 01_data_ingestion_and_preparation.ipynb
+├── notebooks/                  # Jupyter notebooks for exploration, analysis, and experimentation
+│   ├── 01_setup_and_config/
+│   ├── 02_data_ingestion/
+│   ├── 03_data_quality_assessment/
+│   ├── 04_exploratory_data_analysis_eda/
+│   ├── 05_data_preprocessing/
+│   ├── 06_modeling/
+│   ├── 07_evaluation/
+│   └── archive/                # Older or less relevant notebooks
 
-│   └── ...                # (Other notebooks for EDA, modeling, evaluation)
+├── reports/                    # Generated reports, figures, and final outputs/visualizations
+│   └── figures/                # For plots and images saved from notebooks/scripts
 
-├── 📁 src/                # 🐍 Source code for utility functions and reusable scripts
+├── src/                        # Source code (Python modules and scripts)
+│   ├── init.py                 # Makes src a Python package
+│   ├── data_processing/        # Modules for data loading, cleaning, transformation
+│   │   ├── init.py
+│   │   └── cleaners.py         # Example cleaner module
+│   ├── database_utils.py       # Utility functions for database interactions
+│   ├── modeling/               # Modules related to model definitions, training, evaluation
+│   │   ├── init.py
+│   │   └── sdv_models.py       # Example modeling module
+│   └── utils.py                # General helper functions (e.g., config loading)
 
-│   ├── 📄 data_loader.py  # Scripts for data ingestion/loading tasks
-
-│   └── 📄 utils.py        # Helper functions used across the project
-
-├── 📄 .gitignore          # Specifies intentionally untracked files for Git to ignore
-
-├── 📄 LICENSE             # 📜 Project's software license (e.g., MIT) - (I need one!)
-
-├── 📄 README.md           # ℹ️ This file: project overview, setup, and usage instructions
-
-└── 📄 requirements.txt    # 📋 List of Python dependencies for the project
-
-
+├── .gitignore                  # Specifies intentionally untracked files
+├── LICENSE                     # Project's software license (e.g., MIT)
+├── README.md                   # This file: main project documentation
+└── requirements.txt            # Python dependencies for pip
