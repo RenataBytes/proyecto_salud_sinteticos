@@ -49,13 +49,19 @@ proyecto_salud_sinteticos/
 │   └── db_config_example.json  # Example, actual config should be gitignored
 
 ├── data/                       # All project data
+
 │   ├── 01_raw/                 # Immutable original datasets
+
 │   ├── 02_processed/           # Cleaned, transformed, intermediate data
+
 │   ├── 03_validation/          # Datasets for validation purposes (e.g., hold-out sets)
+
 │   ├── 04_synthetic/           # Generated synthetic datasets
+
 │   └── caches/                 # Temporary cached data (gitignored)
 
 ├── docs/                       # Project documentation (reports, environment.yml, diagrams)
+
 │   └── environment.yml         # Example: Conda environment definition
 
 ├── models/                     # Saved/trained machine learning models (e.g., .pkl, .h5)
@@ -71,20 +77,29 @@ proyecto_salud_sinteticos/
 │   └── archive/                # Older or less relevant notebooks
 
 ├── reports/                    # Generated reports, figures, and final outputs/visualizations
+
 │   └── figures/                # For plots and images saved from notebooks/scripts
 
 ├── src/                        # Source code (Python modules and scripts)
+
 │   ├── init.py                 # Makes src a Python package
+
 │   ├── data_processing/        # Modules for data loading, cleaning, transformation
 │   │   ├── init.py
 │   │   └── cleaners.py         # Example cleaner module
+
 │   ├── database_utils.py       # Utility functions for database interactions
+
 │   ├── modeling/               # Modules related to model definitions, training, evaluation
 │   │   ├── init.py
 │   │   └── sdv_models.py       # Example modeling module
+
 │   └── utils.py                # General helper functions (e.g., config loading)
 
 ├── .gitignore                  # Specifies intentionally untracked files
+
 ├── LICENSE                     # Project's software license (e.g., MIT)
+
 ├── README.md                   # This file: main project documentation
+
 └── requirements.txt            # Python dependencies for pip
