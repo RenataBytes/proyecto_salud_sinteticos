@@ -29,11 +29,12 @@ This project explores various techniques for synthetic data generation within th
     * SDV (Synthetic Data Vault) (Framework for synthetic data generation)
     * CTGAN (GAN-based model for tabular synthetic data generation)
     * Matplotlib & Seaborn (Data visualization)
+    
    
     
-* **Database:** PostgreSQL
+* **Database:** PostgreSQL (accessed via SSH tunnel to `109.176.197.243`)
 
-* **Storage:** (Specify bucket type/??, e.g., AWS S3, Google Cloud Storage, when known)
+* **Storage:** MinIO (S3-compatible object storage, accessed via SSH tunnel to `109.176.197.243`, GUI at `http://localhost:9000` when tunnel is active)
 
 * **Version Control:** Git & GitHub
 
@@ -44,29 +45,29 @@ Here's an overview of how the project is organized:
 
 proyecto_salud_sinteticos/ 
 
-├── config/                     # Configuration files (e.g., database.ini, api_keys_example.json)
+├── config/                                  # Configuration files (e.g., database.ini, api_keys_example.json)
 
-│   └── db_config_example.json  # Example, actual config should be gitignored
+│   └── db_config_example.json               # Example, actual config should be gitignored
 
-├── data/                       # All project data
+├── data/                                    # All project data
 
-│   ├── 01_raw/                 # Immutable original datasets
+│   ├── 01_raw/                              # Immutable original datasets
 
-│   ├── 02_processed/           # Cleaned, transformed, intermediate data
+│   ├── 02_processed/                        # Cleaned, transformed, intermediate data
 
-│   ├── 03_validation/          # Datasets for validation purposes (e.g., hold-out sets)
+│   ├── 03_validation/                       # Datasets for validation purposes (e.g., hold-out sets)
 
-│   ├── 04_synthetic/           # Generated synthetic datasets
+│   ├── 04_synthetic/                        # Generated synthetic datasets
 
-│   └── caches/                 # Temporary cached data (gitignored)
+│   └── caches/                              # Temporary cached data (gitignored)
 
-├── docs/                       # Project documentation (reports, environment.yml, diagrams)
+├── docs/                                    # Project documentation (reports, environment.yml, diagrams)
 
-│   └── environment.yml         # Example: Conda environment definition
+│   └── environment.yml                      # Example: Conda environment definition
 
-├── models/                     # Saved/trained machine learning models (e.g., .pkl, .h5)
+├── models/                                  # Saved/trained machine learning models (e.g., .pkl, .h5)
 
-├── notebooks/                  # Jupyter notebooks for exploration, analysis, and experimentation
+├── notebooks/                               # Jupyter notebooks for exploration, analysis, and experimentation
 
 │   ├── 01_setup_and_config/
 
@@ -82,36 +83,36 @@ proyecto_salud_sinteticos/
 
 │   ├── 07_evaluation/
 
-│   └── archive/                # Older or less relevant notebooks
+│   └── archive/                            # Older or less relevant notebooks
 
-├── reports/                    # Generated reports, figures, and final outputs/visualizations
+├── reports/                                # Generated reports, figures, and final outputs/visualizations
 
-│   └── figures/                # For plots and images saved from notebooks/scripts
+│   └── figures/                            # For plots and images saved from notebooks/scripts
 
-├── src/                        # Source code (Python modules and scripts)
+├── src/                                    # Source code (Python modules and scripts)
 
-│   ├── init.py                 # Makes src a Python package
+│   ├── init.py                             # Makes src a Python package
 
-│   ├── data_processing/        # Modules for data loading, cleaning, transformation
-
-│   │   ├── init.py
-
-│   │   └── cleaners.py         # Example cleaner module
-
-│   ├── database_utils.py       # Utility functions for database interactions
-
-│   ├── modeling/               # Modules related to model definitions, training, evaluation
+│   ├── data_processing/                    # Modules for data loading, cleaning, transformation
 
 │   │   ├── init.py
 
-│   │   └── sdv_models.py       # Example modeling module
+│   │   └── cleaners.py                     # Example cleaner module
 
-│   └── utils.py                # General helper functions (e.g., config loading)
+│   ├── database_utils.py                   # Utility functions for database interactions
 
-├── .gitignore                  # Specifies intentionally untracked files
+│   ├── modeling/                           # Modules related to model definitions, training, evaluation
 
-├── LICENSE                     # Project's software license (e.g., MIT)
+│   │   ├── init.py
 
-├── README.md                   # This file: main project documentation
+│   │   └── sdv_models.py                   # Example modeling module
 
-└── requirements.txt            # Python dependencies for pip
+│   └── utils.py                            # General helper functions (e.g., config loading)
+
+├── .gitignore                              # Specifies intentionally untracked files
+
+├── LICENSE                                 # Project's software license (e.g., MIT)
+
+├── README.md                               # This file: main project documentation
+
+└── requirements.txt                        # Python dependencies for pip
